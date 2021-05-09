@@ -11,17 +11,19 @@ export async function getStaticProps() {
     throw new Error('Failed to fetch API')
   }
 
+  const randomNumber = Math.floor(Math.random() * 100)
   const dittoData = await dittoResponse.json()
 
   return {
     props: {
+      randomNumber,
       dittoData
     },
     revalidate: 60
   }
 }
 
-export default function Home({dittoData}) {
+export default function Home({randomNumber, dittoData}) {
   return (
     <Fragment>
       <Head>
@@ -31,6 +33,11 @@ export default function Home({dittoData}) {
 
       <main>
         <h1>Pokedex</h1>
+
+        <dl>
+          <dt>randomNumber</dt>
+          <dd>{randomNumber}</dd>
+        </dl>
 
         <dl>
           <dt>{dittoData.order}</dt>
