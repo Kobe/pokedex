@@ -1,3 +1,5 @@
+[![pokedex_build](https://github.com/Kobe/pokedex/actions/workflows/pokedex-build.yml/badge.svg)](https://github.com/Kobe/pokedex/actions/workflows/pokedex-build.yml)
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/zeit/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
